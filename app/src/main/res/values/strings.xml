@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Kotlin</string>
+    <string name="email_address">電子郵件地址</string>
+    <string name="password">密碼</string>
+
+    <!-- activity_login -->
+    <string name="login">登入</string>
+    <string name="forget_password">忘記密碼？</string>
+    <string name="create_account">建立新帳號</string>
+    
+    <string name="enter_email_address">輸入您的電子郵件地址</string>
+    <string name="send_email_description">系統會發送密碼重設電子郵件來協助您設定新密碼。</string>
+    <string name="find_account">尋找您的帳號</string>
+
+    <!-- activity_signup -->
+    <string name="signup">註冊</string>
+    <string name="nickname">暱稱</string>
+    <string name="already_have_account">已經有帳號了嗎？</string>
+    <string name="please_login">請登入。</string>
+
+    <!-- menu_main -->
+    <string name="logout">登出</string>
+
+    <!-- fragment_news -->
+    <string name="news">新聞</string>
+    <string name="focus">焦點</string>
+    <string name="house">房市</string>
+</resources>

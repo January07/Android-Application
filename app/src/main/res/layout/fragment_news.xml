@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ProgressBar android:id="@+id/news_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView android:id="@+id/news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/news"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp" />
+
+    <HorizontalScrollView android:id="@+id/news_horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:scrollbars="none"
+        android:layout_below="@+id/news">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView android:id="@+id/news_focus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/focus"
+                android:textColor="@color/blue_dark"
+                android:textSize="16sp"
+                android:background="@drawable/textview_selected_background"
+                android:padding="10dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp" />
+
+            <TextView android:id="@+id/news_house"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/house"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:layout_marginEnd="25dp" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <View android:id="@+id/news_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="2.5dp"
+        android:background="@color/gray_dark"
+        android:layout_marginVertical="10dp"
+        android:layout_below="@id/news_horizontalScrollView" />
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/news_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        android:layout_below="@id/news_horizontal_line" />
+
+</RelativeLayout>
