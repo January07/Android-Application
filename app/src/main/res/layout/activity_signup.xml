@@ -72,6 +72,12 @@
             android:inputType="text"
             android:layout_marginVertical="10dp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_verification_description"
+            android:textSize="12sp" />
+
         <Button android:id="@+id/signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

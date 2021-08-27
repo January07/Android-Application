@@ -15,6 +15,7 @@
     <!-- activity_signup -->
     <string name="signup">註冊</string>
     <string name="nickname">暱稱</string>
+    <string name="send_verification_description">註冊成功後，系統會發送一封驗證信到您用來建立帳戶的電子郵件地址。</string>
     <string name="already_have_account">已經有帳號了嗎？</string>
     <string name="please_login">請登入。</string>
 

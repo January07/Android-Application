@@ -37,7 +37,9 @@ class FocusNewsAdapter(var articles: ArrayList<NewsService.FocusNewsArticles>) :
             holder.itemView.context.startActivity(browserIntent)
         }
 
-        Picasso.get().load(articles[position].urlToImage).error(R.drawable.no_image).into(holder.newsImageImageView)
+        if (articles[position].urlToImage != null) {
+            Picasso.get().load(articles[position].urlToImage).error(R.drawable.no_image).into(holder.newsImageImageView)
+        }
 
         holder.newsTitleTextView.text    = articles[position].title
         holder.newsSubtitleTextView.text = articles[position].author
