@@ -39,6 +39,8 @@ class FocusNewsAdapter(var articles: ArrayList<NewsService.FocusNewsArticles>) :
 
         if (articles[position].urlToImage != null) {
             Picasso.get().load(articles[position].urlToImage).error(R.drawable.no_image).into(holder.newsImageImageView)
+        } else {
+            Picasso.get().load(R.drawable.no_image).error(R.drawable.no_image).into(holder.newsImageImageView)
         }
 
         holder.newsTitleTextView.text    = articles[position].title

@@ -1,7 +1,7 @@
 # Android-Application
 This is my first application. It contains a complete login and registration system. After logging in, there is a news list inside, which uses [NewsAPI](https://newsapi.org/) to get the headlines from the API.
 
-<img alt="News" height="450px" width="300px" src="assets/news.png" />
+<img alt="News" height="500px" width="300px" src="assets/news.png" />
 
 ## Download link
 <https://u.pcloud.link/publink/show?code=XZvHelXZb1QiQBc9FzSoNYxVsaJE0QTcpIAy>
