@@ -95,10 +95,19 @@ class SignupActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             } else {
-                if ("badly formatted" in it.exception.toString()) {
-                    Lib.useAlertDialog(this, "錯誤", "必須輸入有效的電子郵件地址！")
-                } else {
-                    Lib.useAlertDialog(this, "錯誤", "密碼至少須含 6 個字元！")
+                when {
+                    "another account" in it.exception.toString() -> {
+                        Lib.useAlertDialog(this, "錯誤", "該電子郵件地址已被註冊！")
+                    }
+                    "badly formatted" in it.exception.toString() -> {
+                        Lib.useAlertDialog(this, "錯誤", "必須輸入有效的電子郵件地址！")
+                    }
+                    "given password " in it.exception.toString() -> {
+                        Lib.useAlertDialog(this, "錯誤", "密碼至少須含 6 個字元！")
+                    }
+                    else                                         -> {
+                        Lib.useAlertDialog(this, "錯誤", it.exception.toString())
+                    }
                 }
             }
         }
