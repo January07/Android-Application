@@ -79,6 +79,7 @@ open class OnRcvScrollListener : RecyclerView.OnScrollListener(), OnBottomListen
                 staggeredGridLayoutManager.findLastVisibleItemPositions(lastPositions)
                 lastVisibleItemPosition = findMax(lastPositions!!)
             }
+            else -> {}
         }
     }
 

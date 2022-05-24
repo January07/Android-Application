@@ -111,7 +111,9 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             } else {
-                if ("badly formatted" in it.exception.toString()) {
+                if ("A network error" in it.exception.toString()) {
+                    Lib.useAlertDialog(this, "沒有網路連線", "請檢查網路連線後再試一次。")
+                } else if ("badly formatted" in it.exception.toString()) {
                     Lib.useAlertDialog(this, "錯誤", "電子郵件格式錯誤！")
                 } else {
                     Lib.useAlertDialog(this, "密碼錯誤", "您輸入的密碼不正確，請再試一次。")
@@ -128,7 +130,11 @@ class LoginActivity : AppCompatActivity() {
                     .setPositiveButton("確定", backLogin)
                     .show()
             } else {
-                Toast.makeText(this, it.exception.toString(), Toast.LENGTH_LONG).show()
+                if ("A network error" in it.exception.toString()) {
+                    Lib.useAlertDialog(this, "沒有網路連線", "請檢查網路連線後再試一次。")
+                } else {
+                    Toast.makeText(this, it.exception.toString(), Toast.LENGTH_LONG).show()
+                }
             }
         }
     }

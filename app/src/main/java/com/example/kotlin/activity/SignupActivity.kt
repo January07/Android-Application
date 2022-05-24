@@ -96,6 +96,9 @@ class SignupActivity : AppCompatActivity() {
                 finish()
             } else {
                 when {
+                    "A network error" in it.exception.toString() -> {
+                        Lib.useAlertDialog(this, "沒有網路連線", "請檢查網路連線後再試一次。")
+                    }
                     "another account" in it.exception.toString() -> {
                         Lib.useAlertDialog(this, "錯誤", "該電子郵件地址已被註冊！")
                     }
