@@ -132,6 +132,8 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 if ("A network error" in it.exception.toString()) {
                     Lib.useAlertDialog(this, "沒有網路連線", "請檢查網路連線後再試一次。")
+                } else if ("badly formatted" in it.exception.toString()) {
+                    Lib.useAlertDialog(this, "錯誤", "電子郵件格式錯誤！")
                 } else {
                     Toast.makeText(this, it.exception.toString(), Toast.LENGTH_LONG).show()
                 }

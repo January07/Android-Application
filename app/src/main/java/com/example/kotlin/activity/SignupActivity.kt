@@ -13,7 +13,7 @@ import androidx.core.widget.addTextChangedListener
 import com.example.kotlin.Lib
 import com.example.kotlin.R
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.ktx.database
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 
 class SignupActivity : AppCompatActivity() {
@@ -83,7 +83,7 @@ class SignupActivity : AppCompatActivity() {
                 Firebase.auth.currentUser?.sendEmailVerification()
 
                 // 寫入 Firebase Realtime Database
-                val myRef = Firebase.database.getReference("Users")
+                val myRef = FirebaseDatabase.getInstance().getReference("Users")
                 val user  = User(email, password)
 
                 myRef.child(nickname).setValue(user)
