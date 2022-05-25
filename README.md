@@ -4,7 +4,7 @@ This is my first application. It contains a complete login and registration syst
 <img src="assets/Splash screen.png" alt="Splash screen" height="450px" width="250px"> <img src="assets/news.png" alt="News" height="450px" width="250px">
 
 ## Download link
-<https://u.pcloud.link/publink/show?code=XZ6i3lXZqS945P5hcwVp9KRQD403Ah2AXsQy>
+<https://u.pcloud.link/publink/show?code=XZDD0zVZRglv2zxMotFKvzz0a6xmgyElyngV>
 
 ## Requirements
 
