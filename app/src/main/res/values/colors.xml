@@ -13,4 +13,6 @@
     <color name="green">#36a420</color>
     <color name="gray_light">#FAFAFA</color>
     <color name="gray_dark">#DBDBDB</color>
+    <color name="gradient_start">#9561a1</color>
+    <color name="gradient_end">#122259</color>
 </resources>
